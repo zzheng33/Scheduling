@@ -8,7 +8,7 @@ import time
 import redis
 e = pbs.event()
 try:
-    r = redis.StrictRedis(host='head.testbed.schedulingpower.emulab.net', port=6379, decode_responses=True)
+    r = redis.StrictRedis(host='head.testbed_zz.schedulingpower.emulab.net', port=6379, decode_responses=True)
     # Information to collect 
     event_type = ''
     event_code = e.type
