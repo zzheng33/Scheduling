@@ -86,4 +86,5 @@
           workerhostname=$(hostname | sed "s/head/node$i/")
           workercanonicalname=$(nslookup $workerhostname | grep Name | awk "{print $2}")
           /opt/pbs/bin/qmgr -c "create node $workerhostname"
+          /opt/pbs/bin/qmgr -c "set node $workerhostname resources_available.sharing = default_exclhost"
         done'
